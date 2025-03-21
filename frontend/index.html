@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Swap DApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.2/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💱 Token Swap</h1>
+
+        <div class="swap-box">
+            <label>From Token Address:</label>
+            <input type="text" id="fromToken" placeholder="0x..." required>
+
+            <label>To Token Address:</label>
+            <input type="text" id="toToken" placeholder="0x..." required>
+
+            <label>Amount to Swap:</label>
+            <input type="number" id="amountIn" placeholder="Amount" required>
+
+            <button onclick="swapTokens()">Swap</button>
+        </div>
+
+        <div class="rate-box">
+            <h2>Set Exchange Rate</h2>
+            <label>Owner Only:</label>
+            <input type="number" id="exchangeRate" placeholder="Rate">
+
+            <button onclick="setExchangeRate()">Set Rate</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
